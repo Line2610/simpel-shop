@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import FavoritElement from "../FavoriteElements";
+import Card from "./Card";
 
 export default async function ProductList({ category }) {
   const url = category
