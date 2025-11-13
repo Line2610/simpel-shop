@@ -4,19 +4,11 @@ import { Suspense } from "react";
 import ProductList from "./components/listview/ProductList";
 import Header from "./components/Header";
 
-export default function Home() {
+export default async function Home({ searchParams }) {
   return (
     <div>
       <Header />
-      <CategoryList />
-      <Suspense>
-        <ProductListContainer />
-      </Suspense>
+      <h1>Forside</h1>
     </div>
   );
-}
-
-async function ProductListContainer({ searchParams } = {}) {
-  const category = (searchParams && searchParams.category) ?? null;
-  return <ProductList category={category} />;
 }
