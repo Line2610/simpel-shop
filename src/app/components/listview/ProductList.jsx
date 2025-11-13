@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import FavoritElement from "./FavoritElement";
+import FavoritElement from "../FavoriteElements";
 
 const ProductList = ({ category }) => {
   return (

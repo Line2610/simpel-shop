@@ -1,5 +1,5 @@
 "use client";
-import useStore from "@/store/favorits";
+import useStore from "./kurv/Favorits";
 import { MdFavoriteBorder } from "react-icons/md";
 import { MdFavorite } from "react-icons/md";
 
