@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import CategoryElement from "./CategoryElement";
 
 export default async function CategoryList() {

@@ -6,9 +6,11 @@ import Header from "./components/Header";
 
 export default async function Home({ searchParams }) {
   const { category } = await searchParams;
+  
   return (
     <div>
       <Header />
+      <h1>Forside</h1>
       <CategoryList />
       <Suspense>
         <ProductList category={category} />

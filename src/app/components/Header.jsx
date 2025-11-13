@@ -1,7 +1,16 @@
-export default function Header() {
-  return (
-    <header>
-      <h1>Simpel Shop</h1>
-    </header>
-  );
+
+=======
+
+
+const Header = () => {
+    return ( 
+        <div className="">
+            <p>Home</p>
+            <p>Products</p>
+        </div>
+     );
 }
+ 
+export default Header;
+=======
+
