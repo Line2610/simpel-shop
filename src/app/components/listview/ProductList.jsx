@@ -15,7 +15,7 @@ export default async function ProductList({ category }) {
       {products.map((product) => (
         <div key={product.id}>
           <FavoritElement id={product.id} />
-          <Link href={`/details/${product.id}`}>
+          <Link href={`/detalje/${product.id}`}>
             <Image
               loading="eager"
               alt={product.brand ? product.brand : "Product Image"}
