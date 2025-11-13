@@ -11,10 +11,6 @@ export default async function Home({ searchParams }) {
     <div>
       <Header />
       <h1>Forside</h1>
-      <CategoryList />
-      <Suspense>
-        <ProductList category={category} />
-      </Suspense>
     </div>
   );
 }
