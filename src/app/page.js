@@ -6,12 +6,16 @@ import Header from "./components/Header";
 
 export default async function Home({ searchParams }) {
   return (
-    <div className="">
+    <div>
       <Header />
-      <h1 className="flex min-h-screen items-center justify-center text-center text-8xl font-bold">
-        Simple Shop
-      </h1>
-      <h1>Forside</h1>
+      <div className="flex min-h-screen flex-col items-center justify-center">
+        <h1 className="mb-8 text-center font-mono text-8xl font-bold">
+          Simple Shop
+        </h1>
+        <button className="cursor-pointer flex-row rounded-full bg-pink-200 p-4 text-2xl text-gray-700 hover:scale-105 hover:transform">
+          Se produkter
+        </button>
+      </div>
     </div>
   );
 }
