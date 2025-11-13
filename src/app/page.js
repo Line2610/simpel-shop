@@ -5,8 +5,6 @@ import ProductList from "./components/listview/ProductList";
 import Header from "./components/Header";
 
 export default async function Home({ searchParams }) {
-  const { category } = await searchParams;
-  
   return (
     <div>
       <Header />
