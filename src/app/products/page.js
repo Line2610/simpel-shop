@@ -1,5 +1,6 @@
 import ProductList from "../components/listview/ProductList";
 import Header from "../components/Header";
+
 import CategoryList from "../components/CategoryList";
 
 export default async function ProductsPage({ searchParams }) {
