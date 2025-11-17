@@ -1,0 +1,12 @@
+import ProductList from "../components/listview/ProductList";
+import Header from "../components/Header";
+
+export default async function ProductsPage({ searchParams }) {
+  return (
+    <div>
+      <Header />
+      <h1 className="mt-15 mb-15 text-center text-4xl font-medium">Products</h1>
+      <ProductList />
+    </div>
+  );
+}

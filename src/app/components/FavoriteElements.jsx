@@ -3,15 +3,25 @@ import useStore from "./kurv/Favorits";
 import { MdFavoriteBorder } from "react-icons/md";
 import { MdFavorite } from "react-icons/md";
 
-const Favorite = ({ id }) => {
+const Favorite = ({ id, className = "" }) => {
   const { favorite, toggleFavorite } = useStore();
-  console.log(favorite);
+
   if (favorite.includes(id)) {
-    console.log("Favorite:", id);
-    return <MdFavorite onClick={() => toggleFavorite(id)} />;
+    return (
+      <MdFavorite
+        className={className}
+        onClick={() => toggleFavorite(id)}
+        aria-label={`Unfavorite ${id}`}
+      />
+    );
   } else {
-    console.log("Not Favorite:", id);
-    return <MdFavoriteBorder onClick={() => toggleFavorite(id)} />;
+    return (
+      <MdFavoriteBorder
+        className={className}
+        onClick={() => toggleFavorite(id)}
+        aria-label={`Favorite ${id}`}
+      />
+    );
   }
 };
 
