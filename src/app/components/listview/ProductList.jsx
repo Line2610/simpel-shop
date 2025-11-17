@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import FavoritElement from "../FavoriteElements";
+import AddToCartButton from "../kurv/AddToCartButton";
 
 export default async function ProductList({ category }) {
   const url = category
@@ -11,14 +12,18 @@ export default async function ProductList({ category }) {
   const { products } = await response.json();
 
   return (
-    <div className="grid grid-cols-4 justify-items-center">
+    <div className="grid grid-cols-4 justify-items-center ml-5 mr-5">
       {products.map((product) => (
-        <div key={product.id}>
+        <div key={product.id} className="w-full px-2">
           <div className="relative bg-stone-100">
             <FavoritElement
               id={product.id}
               className="absolute top-3 right-3 cursor-pointer rounded-full bg-stone-100 p-1 text-3xl text-pink-300"
             />
+
+            <div className="absolute right-3 bottom-3 z-10">
+              <AddToCartButton product={product} />
+            </div>
 
             <Link href={`/detalje/${product.id}`}>
               <Image
