@@ -71,7 +71,7 @@ export default function CartPanel() {
                 <span>Total</span>
                 <span>{total.toFixed(2)},-</span>
               </div>
-              <Link href="/Payment">
+              <Link href="/payment">
                 <button className="w-full cursor-pointer rounded-lg bg-pink-300 py-3 text-white transition-colors">
                   Gå til betaling
                 </button>
