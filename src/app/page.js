@@ -8,6 +8,7 @@ export default async function Home({ searchParams }) {
   return (
     <div>
       <Header />
+      <CategoryList />
       <div className="flex min-h-screen flex-col items-center justify-center">
         <h1 className="mb-8 text-center font-mono text-8xl font-bold">
           Simple Shop
