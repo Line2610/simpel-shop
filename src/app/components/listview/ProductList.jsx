@@ -12,7 +12,7 @@ export default async function ProductList({ category }) {
   const { products } = await response.json();
 
   return (
-    <div className="grid grid-cols-4 justify-items-center ml-5 mr-5">
+    <div className="mr-5 ml-5 grid grid-cols-4 justify-items-center">
       {products.map((product) => (
         <div key={product.id} className="w-full px-2">
           <div className="relative bg-stone-100">
