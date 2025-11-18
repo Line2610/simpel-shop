@@ -1,4 +1,5 @@
 import CategoryElement from "./CategoryElement";
+import { Suspense } from "react";
 
 export default async function CategoryList() {
   const response = await fetch("https://dummyjson.com/products/category-list");

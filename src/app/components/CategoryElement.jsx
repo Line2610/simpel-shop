@@ -6,12 +6,9 @@ const CategoryElement = ({ category, isDropdown = false, options = [] }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Debug log
-  console.log("Dropdown open:", isOpen, "Options:", options);
-
   if (isDropdown) {
     return (
-      <div className="relative">
+      <div>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex h-12 cursor-pointer items-center rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm hover:border-gray-400"
@@ -21,15 +18,15 @@ const CategoryElement = ({ category, isDropdown = false, options = [] }) => {
         </button>
 
         {isOpen && (
-          <div className="absoulte top-full left-0 z-50 mt-1 max-h-60 max-w-[200px] overflow-y-auto rounded-lg border border-gray-300 text-gray-800">
+          <div className="absolute top-full z-50 mt-1 max-h-60 max-w-[200px] overflow-y-auto rounded-lg border border-gray-300 bg-white shadow-lg">
             {options.map((option, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  router.push(`?category=${option}`);
+                  router.push(`/products?category=${option}`);
                   setIsOpen(false);
                 }}
-                className="block w-full cursor-pointer px-4 py-3 text-left text-sm hover:bg-pink-100"
+                className="block w-full cursor-pointer border-b border-gray-100 px-4 py-3 text-left text-sm text-gray-800 last:border-b-0 hover:bg-pink-100"
               >
                 {option}
               </button>
@@ -42,7 +39,7 @@ const CategoryElement = ({ category, isDropdown = false, options = [] }) => {
 
   return (
     <button
-      onClick={() => router.push(`?category=${category}`)}
+      onClick={() => router.push(`/products?category=${category}`)}
       className="cursor-pointer rounded-lg border border-gray-300 bg-white px-2 py-1 whitespace-nowrap"
     >
       <span className="font-medium">{category}</span>
