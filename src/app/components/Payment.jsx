@@ -11,8 +11,8 @@ const Payment = () => {
   );
 
   const handlePurchase = () => {
-    // Her kan du tilføje logik for at håndtere købet
-    alert("Tak for dit køb!");
+    // Add logic to handle the purchase
+    alert("Thank you for your purchase!");
   };
 
   return (
@@ -20,7 +20,7 @@ const Payment = () => {
       {/* Cart Items */}
       <div className="flex-1 overflow-y-auto">
         {items.length === 0 ? (
-          <p className="mt-8 text-center text-gray-500">Kurven er tom</p>
+          <p className="mt-8 text-center text-gray-500">Cart is empty</p>
         ) : (
           <ul className="space-y-4">
             {items.map((item) => (
@@ -40,7 +40,7 @@ const Payment = () => {
                 <button
                   onClick={() => removeItem(item.id)}
                   className="cursor-pointer self-start text-2xl"
-                  aria-label={`Fjern ${item.title}`}
+                  aria-label={`Remove ${item.title}`}
                 >
                   &times;
                 </button>
@@ -61,7 +61,7 @@ const Payment = () => {
             onClick={handlePurchase}
             className="w-full cursor-pointer rounded-lg bg-pink-300 py-3 text-white transition-colors hover:bg-pink-400"
           >
-            Køb nu
+            Buy Now
           </button>
         </div>
       )}

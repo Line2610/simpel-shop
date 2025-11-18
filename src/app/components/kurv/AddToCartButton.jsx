@@ -10,7 +10,7 @@ export default function AddToCartButton({ product }) {
       onClick={() => addItem(product)}
       className="cursor-pointer text-2xl"
     >
-      Læg i kurv
+      Add to cart
     </MdOutlineShoppingBag>
   );
 }
