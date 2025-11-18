@@ -12,7 +12,7 @@ export default async function Home({ searchParams }) {
         </h1>
         <Link href="/products">
           <button className="cursor-pointer flex-row rounded-full bg-pink-200 p-4 text-2xl text-gray-700 hover:scale-105 hover:transform">
-            Se produkter
+            View Products
           </button>
         </Link>
       </div>
