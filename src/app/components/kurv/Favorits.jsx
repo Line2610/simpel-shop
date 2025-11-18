@@ -2,7 +2,6 @@
 "use client";
 import create from "zustand";
 
-// Simple zustand store for favorites
 const useStore = create((set) => ({
 	favorite: [],
 	toggleFavorite: (id) =>

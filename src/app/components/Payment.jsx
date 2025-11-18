@@ -11,7 +11,6 @@ const Payment = () => {
   );
 
   const handlePurchase = () => {
-    // Add logic to handle the purchase
     alert("Thank you for your purchase!");
   };
 
